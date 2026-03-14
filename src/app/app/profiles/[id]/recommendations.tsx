@@ -3,11 +3,11 @@
 import { useState } from 'react';
 import {
   generalApparelSizeRecommendation,
-  GeneralApparelSizeRecommendationInput,
-  GeneralApparelSizeRecommendationOutput,
+  type GeneralApparelSizeRecommendationInput,
+  type GeneralApparelSizeRecommendationOutput,
   measurementProgressSummary,
-  MeasurementProgressSummaryInput,
-  MeasurementProgressSummaryOutput,
+  type MeasurementProgressSummaryInput,
+  type MeasurementProgressSummaryOutput,
 } from '@/ai/flows';
 import { Button } from '@/components/ui/button';
 import {
@@ -25,7 +25,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Bot, Loader2 } from 'lucide-react';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Calendar } from '@/components/ui/calendar';
-import { DateRange } from 'react-day-picker';
+import { type DateRange } from 'react-day-picker';
 import { format } from 'date-fns';
 
 export function Recommendations({ profile }: { profile: Profile }) {
