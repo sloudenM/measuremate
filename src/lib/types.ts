@@ -5,7 +5,9 @@ export type Measurement = {
   date: string; // ISO string
   height?: number; // cm
   weight?: number; // kg
+  head?: number;
   neck?: number;
+  shoulders?: number;
   chest?: number;
   waist?: number;
   hips?: number;
@@ -31,7 +33,9 @@ export type Profile = {
 export const measurementLabels: Record<keyof Omit<Measurement, 'id' | 'date'>, string> = {
   height: 'Height (cm)',
   weight: 'Weight (kg)',
+  head: 'Head (cm)',
   neck: 'Neck (cm)',
+  shoulders: 'Shoulders (cm)',
   chest: 'Chest (cm)',
   waist: 'Waist (cm)',
   hips: 'Hips (cm)',

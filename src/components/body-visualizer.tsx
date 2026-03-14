@@ -15,7 +15,9 @@ type BodyPoint = {
 };
 
 const points: BodyPoint[] = [
+  { key: 'head', label: 'Head', x: 50, y: 15 },
   { key: 'neck', label: 'Neck', x: 50, y: 28 },
+  { key: 'shoulders', label: 'Shoulders', x: 50, y: 42 },
   { key: 'chest', label: 'Chest', x: 50, y: 55 },
   { key: 'sleeveLength', label: 'Sleeve', x: 8, y: 105 },
   { key: 'waist', label: 'Waist', x: 50, y: 80 },
