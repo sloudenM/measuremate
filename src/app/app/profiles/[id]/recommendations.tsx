@@ -5,10 +5,12 @@ import {
   generalApparelSizeRecommendation,
   type GeneralApparelSizeRecommendationInput,
   type GeneralApparelSizeRecommendationOutput,
+} from '@/ai/flows/general-apparel-size-recommendation-flow';
+import {
   measurementProgressSummary,
   type MeasurementProgressSummaryInput,
   type MeasurementProgressSummaryOutput,
-} from '@/ai/flows';
+} from '@/ai/flows/measurement-progress-summary-flow';
 import { Button } from '@/components/ui/button';
 import {
   Card,
