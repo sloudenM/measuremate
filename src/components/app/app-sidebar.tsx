@@ -2,13 +2,14 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Users, LayoutDashboard, Settings } from 'lucide-react';
+import { Users, LayoutDashboard, Settings, Camera } from 'lucide-react';
 import { Logo } from '@/components/logo';
 import { cn } from '@/lib/utils';
 import { Button } from '../ui/button';
 
 const navLinks = [
   { href: '/app', label: 'Dashboard', icon: LayoutDashboard },
+  { href: '/app/measure', label: 'Measure', icon: Camera },
   { href: '#', label: 'Settings', icon: Settings },
 ];
 
