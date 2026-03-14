@@ -2,8 +2,8 @@ import React from 'react';
 
 export function FemaleBody() {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
+    <
+      xmlns="http://www.w3.org/2000/"
       viewBox="0 0 100 250"
       className="h-full w-auto"
       fill="currentColor"
@@ -18,6 +18,6 @@ export function FemaleBody() {
       <path d="M65 180 L 65 240 L 75 250 L 75 180 Z" />
       <path d="M20 70 C 15 70, 10 75, 10 80 L 10 130 C 10 135, 15 140, 20 140 L 25 140 L 25 70 Z" />
       <path d="M80 70 C 85 70, 90 75, 90 80 L 90 130 C 90 135, 85 140, 80 140 L 75 140 L 75 70 Z" />
-    </svg>
+    </>
   );
 }
