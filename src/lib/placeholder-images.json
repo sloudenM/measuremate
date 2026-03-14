@@ -1,3 +1,46 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "man-1",
+      "description": "Profile picture of a man",
+      "imageUrl": "https://picsum.photos/seed/man-1/400/400",
+      "imageHint": "man profile"
+    },
+    {
+      "id": "woman-1",
+      "description": "Profile picture of a woman",
+      "imageUrl": "https://picsum.photos/seed/woman-1/400/400",
+      "imageHint": "woman profile"
+    },
+    {
+      "id": "boy-1",
+      "description": "Profile picture of a boy",
+      "imageUrl": "https://picsum.photos/seed/boy-1/400/400",
+      "imageHint": "boy profile"
+    },
+    {
+      "id": "girl-1",
+      "description": "Profile picture of a girl",
+      "imageUrl": "https://picsum.photos/seed/girl-1/400/400",
+      "imageHint": "girl profile"
+    },
+    {
+      "id": "man-2",
+      "description": "Profile picture of a man",
+      "imageUrl": "https://picsum.photos/seed/man-2/400/400",
+      "imageHint": "man profile"
+    },
+    {
+      "id": "woman-2",
+      "description": "Profile picture of a woman",
+      "imageUrl": "https://picsum.photos/seed/woman-2/400/400",
+      "imageHint": "woman profile"
+    },
+    {
+      "id": "hero-image",
+      "description": "Hero image for landing page",
+      "imageUrl": "https://picsum.photos/seed/hero/1200/800",
+      "imageHint": "fitness measurement"
+    }
+  ]
 }

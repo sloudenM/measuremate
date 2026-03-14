@@ -1,0 +1,113 @@
+import type { Profile } from './types';
+
+export const profiles: Profile[] = [
+  {
+    id: '1',
+    name: 'Jane Doe',
+    gender: 'women',
+    avatarUrl: 'https://picsum.photos/seed/woman-1/400/400',
+    goal: 'Gain muscle',
+    measurements: [
+      {
+        id: 'm1-1',
+        date: '2023-01-15T09:00:00.000Z',
+        height: 165,
+        weight: 60,
+        chest: 88,
+        waist: 68,
+        hips: 94,
+        rightBicep: 30,
+        leftBicep: 30,
+        rightThigh: 55,
+        leftThigh: 55,
+      },
+      {
+        id: 'm1-2',
+        date: '2023-04-15T09:00:00.000Z',
+        height: 165,
+        weight: 62,
+        chest: 90,
+        waist: 67,
+        hips: 95,
+        rightBicep: 31,
+        leftBicep: 31,
+        rightThigh: 56,
+        leftThigh: 56,
+      },
+       {
+        id: 'm1-3',
+        date: '2023-07-15T09:00:00.000Z',
+        height: 165,
+        weight: 63,
+        chest: 91,
+        waist: 66,
+        hips: 96,
+        rightBicep: 32,
+        leftBicep: 32,
+        rightThigh: 57,
+        leftThigh: 57,
+      },
+    ],
+  },
+  {
+    id: '2',
+    name: 'John Smith',
+    gender: 'men',
+    avatarUrl: 'https://picsum.photos/seed/man-1/400/400',
+    goal: 'Lose weight',
+    measurements: [
+      {
+        id: 'm2-1',
+        date: '2023-03-01T08:30:00.000Z',
+        height: 180,
+        weight: 95,
+        neck: 40,
+        chest: 110,
+        waist: 100,
+        hips: 105,
+        sleeveLength: 64,
+        inseam: 82,
+      },
+      {
+        id: 'm2-2',
+        date: '2023-06-01T08:30:00.000Z',
+        height: 180,
+        weight: 90,
+        neck: 39,
+        chest: 108,
+        waist: 95,
+        hips: 103,
+        sleeveLength: 64,
+        inseam: 82,
+      },
+    ],
+  },
+  {
+    id: '3',
+    name: 'Emily Jr.',
+    gender: 'girls',
+    avatarUrl: 'https://picsum.photos/seed/girl-1/400/400',
+    measurements: [],
+  },
+  {
+    id: '4',
+    name: 'Mikey',
+    gender: 'boys',
+    avatarUrl: 'https://picsum.photos/seed/boy-1/400/400',
+    measurements: [
+      {
+        id: 'm4-1',
+        date: '2023-05-20T16:00:00.000Z',
+        height: 140,
+        weight: 35,
+        chest: 70,
+        waist: 60,
+        hips: 72,
+      },
+    ],
+  },
+];
+
+export const getProfileById = (id: string) => {
+  return profiles.find((p) => p.id === id);
+};
