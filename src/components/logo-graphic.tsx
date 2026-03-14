@@ -9,66 +9,35 @@ export function LogoGraphic({ className }: { className?: string }) {
       xmlns="http://www.w3.org/2000/svg"
       className={cn(className)}
     >
-      <g transform="scale(1.2) translate(-8, -5)">
+      <g transform="translate(5,0) scale(0.9)">
+        {/* Tape Behind */}
+        <path d="M 10,50 C 40,25 60,25 90,50" stroke="hsl(var(--accent))" strokeWidth="14" fill="none" strokeLinecap="round"/>
+        
         {/* Figure */}
-        <path
-          d="M50 10 C 45 10, 40 15, 40 20 C 40 25, 45 30, 50 30 C 55 30, 60 25, 60 20 C 60 15, 55 10, 50 10 Z"
-          fill="hsl(var(--primary))"
-        />
-        <path
-          d="M 48 30 L 52 30 L 55 55 L 45 55 Z"
-          fill="hsl(var(--primary))"
-        />
-        {/* Arms */}
-        <path
-          d="M 45 35 C 30 25, 15 40, 20 50"
-          stroke="hsl(var(--primary))"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
-         <path
-          d="M 55 35 C 70 25, 85 40, 80 50"
-          stroke="hsl(var(--primary))"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
-        {/* Legs */}
-         <path
-          d="M 45 55 L 30 80 L 35 95"
-          stroke="hsl(var(--primary))"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 55 55 C 65 70, 60 85, 75 90"
-          stroke="hsl(var(--primary))"
-          strokeWidth="8"
-          fill="none"
-          strokeLinecap="round"
-        />
+        <path d="M50,8 a10,10 0 1,1 0,20 a10,10 0 1,1 0,-20" fill="hsl(var(--primary))"/>
+        <path d="M42,25 C 40,45 50,40 52,55 C 55,80 40,80 35,95" stroke="hsl(var(--primary))" strokeWidth="12" fill="none" strokeLinecap="round"/>
+        <path d="M42,25 L20,15" stroke="hsl(var(--primary))" strokeWidth="12" fill="none" strokeLinecap="round"/>
+        <path d="M52,55 L85,40" stroke="hsl(var(--primary))" strokeWidth="12" fill="none" strokeLinecap="round"/>
+        
+        {/* Tape Front */}
+        <path d="M20,70 C40,95 70,95 80,70" stroke="hsl(var(--accent))" strokeWidth="14" fill="none" strokeLinecap="round"/>
+        
+        {/* Tape Markings */}
+        <g stroke="hsl(var(--accent-foreground))" strokeWidth="2.5" strokeLinecap="round">
+            <line x1="20" y1="46" x2="22" y2="44" />
+            <line x1="30" y1="36" x2="32" y2="34" />
+            <line x1="40" y1="30" x2="42" y2="28" />
+            <line x1="50" y1="28" x2="50" y2="26" />
+            <line x1="60" y1="30" x2="58" y2="28" />
+            <line x1="70" y1="36" x2="68" y2="34" />
+            <line x1="80" y1="46" x2="78" y2="44" />
 
-        {/* Tape */}
-        <path
-          d="M 90 40 C 60 20, 40 40, 30 60 S 20 85, 50 80"
-          stroke="hsl(var(--accent))"
-          strokeWidth="12"
-          fill="none"
-          strokeLinecap="round"
-        />
-        {/* Tape markings */}
-        <line x1="83" y1="33" x2="86" y2="30" stroke="white" strokeWidth="2" />
-        <line x1="73" y1="29" x2="76" y2="26" stroke="white" strokeWidth="2" />
-        <line x1="63" y1="29" x2="66" y2="26" stroke="white" strokeWidth="2" />
-        <line x1="53" y1="33" x2="56" y2="30" stroke="white" strokeWidth="2" />
-        <line x1="43" y1="41" x2="46" y2="38" stroke="white" strokeWidth="2" />
-        <line x1="33" y1="52" x2="36" y2="49" stroke="white" strokeWidth="2" />
-        <line x1="26" y1="65" x2="29" y2="62" stroke="white" strokeWidth="2" />
-        <line x1="24" y1="75" x2="27" y2="72" stroke="white" strokeWidth="2" />
-        <line x1="34" y1="81" x2="37" y2="78" stroke="white" strokeWidth="2" />
-        <line x1="44" y1="81" x2="47" y2="78" stroke="white" strokeWidth="2" />
+            <line x1="30" y1="80" x2="32" y2="78" />
+            <line x1="40" y1="88" x2="42" y2="86" />
+            <line x1="50" y1="90" x2="50" y2="88" />
+            <line x1="60" y1="88" x2="58" y2="86" />
+            <line x1="70" y1="80" x2="68" y2="78" />
+        </g>
       </g>
     </svg>
   );
