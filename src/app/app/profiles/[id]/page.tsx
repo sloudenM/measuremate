@@ -1,22 +1,12 @@
 import { getProfileById } from '@/lib/data';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { AppHeader } from '@/components/app/app-header';
-import { BodyVisualizer } from '@/components/body-visualizer';
 import { MeasurementHistory } from './measurement-history';
 import { Recommendations } from './recommendations';
-import { measurementLabels, Measurement } from '@/lib/types';
 import { AddMeasurementForm } from './add-measurement-form';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import { MeasurementOverview } from './measurement-overview';
 
 export default function ProfilePage({ params }: { params: { id: string } }) {
   const profile = getProfileById(params.id);
@@ -59,43 +49,10 @@ export default function ProfilePage({ params }: { params: { id: string } }) {
             <TabsTrigger value="recommendations">AI Recommendations</TabsTrigger>
           </TabsList>
           <TabsContent value="overview">
-            <Card>
-              <CardHeader>
-                <CardTitle>Current Measurements</CardTitle>
-                <CardDescription>
-                  Your most recently recorded measurements.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                {latestMeasurement ? (
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="md:col-span-1">
-                      <BodyVisualizer gender={profile.gender} measurements={latestMeasurement} onPointClick={()=>{}} />
-                    </div>
-                    <div className="md:col-span-2 grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      {Object.keys(measurementLabels).map((key) => {
-                          const measurementKey = key as keyof Omit<Measurement, 'id'|'date'>;
-                          const value = latestMeasurement[measurementKey];
-                          if (value === undefined) return null;
-                          return (
-                            <div key={key} className="p-4 bg-muted/50 rounded-lg">
-                              <Label className="text-sm text-muted-foreground">{measurementLabels[measurementKey].split('(')[0]}</Label>
-                              <p className="text-2xl font-semibold">{value} <span className="text-sm font-normal text-muted-foreground">cm</span></p>
-                            </div>
-                          )
-                      })}
-                    </div>
-                  </div>
-                ) : (
-                  <div className="text-center py-10">
-                    <p className="text-muted-foreground">No measurements recorded yet.</p>
-                    <div className="mt-4">
-                      <AddMeasurementForm />
-                    </div>
-                  </div>
-                )}
-              </CardContent>
-            </Card>
+            <MeasurementOverview
+              profile={profile}
+              latestMeasurement={latestMeasurement}
+            />
           </TabsContent>
           <TabsContent value="history">
             <MeasurementHistory profile={profile} />
