@@ -1,11 +1,12 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { cn } from '@/lib/utils';
 import { type GenderCategory, type Measurement } from '@/lib/types';
-import { MaleBody } from './male-body';
-import { FemaleBody } from './female-body';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip';
+import MaleBody from './male-body.png';
+import FemaleBody from './female-body.png';
 
 type BodyPoint = {
   key: keyof Omit<Measurement, 'id' | 'date'>;
@@ -44,7 +45,7 @@ export function BodyVisualizer({ gender, measurements, onPointClick, activePoint
 
   return (
     <div className="relative w-full max-w-[200px] mx-auto text-muted-foreground">
-      <BodyModel />
+      <Image src={BodyModel} alt={isMale ? 'Male Body' : 'Female Body'} />
       <TooltipProvider>
         {points.map((point) => (
           <Tooltip key={point.key} delayDuration={100}>
