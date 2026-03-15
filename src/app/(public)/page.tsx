@@ -89,7 +89,7 @@ export default function LandingPage() {
             <div className="mt-16 max-w-5xl mx-auto">
               <div className="relative rounded-xl overflow-hidden border shadow-lg">
                 <Image
-                  src="https://picsum.photos/seed/hero/1200/800"
+                  src="https://i.ibb.co/8n7yKxPL/Gemini-Generated-Image-dunkusdunkusdunk.png"
                   alt="MeasureMate App Screenshot"
                   width={1200}
                   height={800}
